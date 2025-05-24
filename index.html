@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Ones</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
 </head>
 
 <body>
 
     <header id="topMenu">
-        <img src="/imagens/logomarca_branca.png" alt="">
+        <i class="fi fi-sr-menu-burger" id="sandwich"></i>
+        <img src="/imagens/logomarca_branca.png" id="logomarca" alt="Logo">
         <div id="menuContainer">
             <div class="menus activeMenu">Home</div>
-            <div class="menus">Serviços</div>
+            <a href="#servicos"><div class="menus">Serviços</div></a> 
             <div class="menus">Sobre</div>
             <div class="menus">Serviços</div>
             <div class="menus">Contato</div>
@@ -30,9 +34,9 @@
         </div>
     </main>
 
-    <center> 
-        <h1 style="font-size: 40px;">NOSSOS SERVIÇOS</h1>
-        <img src="/imagens/ursinho.png" alt="Ursinho">
+    <center>
+        <h1 style="font-size: 45px;">NOSSOS SERVIÇOS</h1>
+        <img src="/imagens/ursinho.png">
     </center>
 
     <section class="sections">
@@ -40,7 +44,7 @@
         <div id="contentBox2">
             <h1>Desenvolvimento de Habilidades</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis laborum, quam
-                maiores labore culpa consequatur atque exercitationem eveniet. 
+                maiores labore culpa consequatur atque exercitationem eveniet.
                 Labore consectetur porro fuga! Eum voluptatibus doloremque similique eaque vel fugiat amet?
             </p>
         </div>
@@ -50,16 +54,16 @@
         <div id="banner3"></div>
         <div id="contentBox3">
             <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Totam a maxime, sapiente aspernatur, fuga vel praesentium porro, 
-                dignissimos nihil minima quasi blanditiis non rerum officia 
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Totam a maxime, sapiente aspernatur, fuga vel praesentium porro,
+                dignissimos nihil minima quasi blanditiis non rerum officia
                 ullam laboriosam est expedita illum!
             </p>
         </div>
     </section>
 
-    <footer>
-        <div id="footerAbout">
+    <footer id="footer1">
+        <div class="footerBox" id="footerAbout">
             <h1> Lorem ipsum dolor</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
                 ullam labore est repudiandae deserunt odit iusto iure, quae impedit
@@ -67,16 +71,50 @@
                 Incidunt, illo.
             </p>
         </div>
-        <div id="footerContacts">
-            (00)3000-0000 <br>
-            contato@email.com.br <br>
-            Av. Beira Rio, Recife/PE <br>
-            Seg. a Sex das 08:00 às 17:00 <br>
+        <div class="footerBox" id="footerContacts">
+            <i class="fi fi-sr-phone-call"></i> (00)3000-0000 <br>
+            <i class="fi fi-sr-envelope"></i> contato@email.com.br <br>
+            <i class="fi fi-sr-marker"></i> Av. Beira Rio, Recife/PE <br>
+            <i class="fi fi-sr-clock-five"></i> Seg. a Sex das 08:00 às 17:00 <br>
         </div>
-        <div id="footerLinks">
-            
+        <div class="footerBox" id="footerLinks">
+            <img src="/imagens/logomarca_escura.png" alt="Logo"> <br>
+            Siga-nos nas redes sociais <br>
+            <i class="fi fi-brands-facebook icons">
+            </i><i class="fi fi-brands-whatsapp icons">
+            </i><i class="fi fi-brands-instagram icons"></i>
+            <i class="fi fi-brands-twitter-alt icons"></i>
         </div>
     </footer>
+
+    <footer id="footer2">
+        <div id="copyright">
+            Copyright© 2024 / Site feito por <a href="mailto:juliosbto@gmail.com">Júlio Brito</a>
+        </div>
+    </footer>
+
+    <div id="sideMenu">
+        <i class="fi fi-sr-cross-small" id="closeButton"></i>
+            <div class="menus activeMenu">Home</div>
+            <div class="menus">Serviços</div>
+            <div class="menus">Sobre</div>
+            <div class="menus">Serviços</div>
+            <div class="menus">Contato</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(function(){
+        $("#sandwich").click(function(){
+          $('#sideMenu').addClass('show');
+        });
+    
+        $("#closeButton").click(function(){
+          $('#sideMenu').removeClass('show');
+        });
+      });
+    </script>
 
 </body>
 

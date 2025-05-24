@@ -31,6 +31,10 @@ body {
   font-size: 18px;
 }
 
+#topMenu img {
+  height: 100px;
+}
+
 #menuContainer {
   display: flex;
   gap: 10px;
@@ -55,6 +59,37 @@ body {
   background-color: var(--vermelho);
 }
 
+#sandwich {
+  display: none;
+  color: var(--branco);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#sideMenu {
+  background-color: var(--azul-claro);
+  height: 100vw;
+  width: 250px;
+  position: fixed;
+  left: -250px;
+  top: 0px;
+  box-shadow: 1px 0px 10px var(--preto);
+  z-index: 1000;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.3s;
+}
+
+.show {
+  left: 0px !important;
+}
+
+#closeButton {
+  font-size: 32px;
+  color: red;
+  cursor: pointer;
+}
+
 #banner {
   background-image: url(/imagens/criancas.jpg);
   height: 35vw;
@@ -68,6 +103,7 @@ body {
 #contentBox {
   /*border: 1px solid red;*/
   background-color: rgb(0, 172, 230, 0.75);
+  height: 60%;
   width: 700px;
   padding: 35px;
   color: var(--branco);
@@ -92,6 +128,8 @@ body {
   display: flex;
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
 .sections h1 {
@@ -120,32 +158,208 @@ body {
 
 #contentBox3 {
   width: 35%;
+  height: 350px;
   color: var(--branco);
   background-color: var(--verde-limão);
   padding: 20px;
   border-radius: 0px 60px 60px 0px;
 }
 
-footer {
-    background-color: var(--azul-claro);
-    display: flex;
-    padding: 50px 150px 50px 150px;
+#footer1 {
+  background-color: var(--azul-claro);
+  display: flex;
+  padding: 50px 150px 50px 150px;
+  color: var(--branco);
+  min-height: 500px;
 }
 
-#footerAbout{
-    border: 1px solid red;
-    height: 400px;
+.footerBox {
+  padding: 20px;
+}
+
+#footerAbout {
+  /*border: 1px solid red;*/
+  width: 50%;
+}
+
+#footerAbout h1 {
+  margin-top: -20px;
+}
+
+#footerContacts {
+  /*border: 1px solid red;*/
+  width: 25%;
+  margin-top: 56px;
+}
+
+#footerLinks {
+  /*border: 1px solid red;*/
+  width: 25%;
+}
+
+#footerLinks img {
+  height: 50px;
+  margin-top: -8px;
+}
+
+.icons {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+#footer2 {
+  background-color: var(--azul-claro);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#copyright {
+  color: var(--branco);
+  border-top: 1px solid var(--amarelo-canário);
+  width: 500px;
+  text-align: center;
+}
+
+#copyright a {
+  color: var(--amarelo-canário);
+  text-decoration: none;
+}
+
+#sandwich {
+  display: none;
+  color: var(--branco);
+  font-size: 25px;
+}
+
+#sideMenu {
+  background-color: var(--azul-claro);
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  left: -250px;
+  top: 0px;
+  box-shadow: 1px 0px 10px var(--preto);
+  z-index: 1000;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.3s;
+}
+
+.show {
+  left: 0px !important;
+}
+
+/*Responsividade - Tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  #banner {
+    height: 60vw;
+  }
+  #contentBox {
+    width: 400px;
+    height: auto;
+    padding: 10px;
+  }
+  #contentBox h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  #menuContainer,
+  #logomarca {
+    display: none;
+  }
+  #sandwich {
+    display: block;
+  }
+  .sections {
+    flex-wrap: wrap;
+  }
+  #banner3 {
+    min-width: 90vw;
+    max-height: 40vw;
+    border-radius: 60px 60px 0px 0px;
+  }
+  #contentBox3 {
+    min-width: 90vw;
+    max-height: 35vw;
+    border-radius: 0px 0px 60px 60px;
+  }
+  #footer1 {
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+  }
+  #footerAbout {
     width: 50%;
+  }
+  #footerContacts {
+    width: 50%;
+    padding: 0px;
+    text-align: center;
+    margin-top: 76px;
+  }
+  #footerLinks {
+    width: 100%;
+    text-align: center;
+  }
 }
+/*Responsividade - Mobile*/
+@media screen and (max-width: 767px) {
+  #menuContainer,
+  #logomarca {
+    display: none;
+  }
+  #sandwich {
+    display: block;
+  }
+  #banner {
+    height: 60vw;
+  }
+  #contentBox {
+    width: 400px;
+    height: auto;
+    padding: 10px;
+  }
+  #contentBox h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .sections {
+    flex-wrap: wrap;
+  }
+  #banner2 {
+    min-width: 350px;
+    min-height: 350px;
+  }
+  #banner3 {
+    min-width: 80vw;
+    max-height: 40vw;
+    border-radius: 60px 60px 0px 0px;
+  }
+  #contentBox3 {
+    min-width: 80vw;
+    min-height: 40vw;
+    border-radius: 0px 0px 60px 60px;
+  }
+  #footer1 {
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+  }
 
-#footerContacts{
-    border: 1px solid red;
-    height: 400px;
-    width: 25%;
-}
-
-#footerLinks{
-    border: 1px solid red;
-    height: 400px;
-    width: 25%;
+  #footerAbout {
+    min-width: 100%;
+  }
+  #footerContacts {
+    min-width: 100%;
+    padding: 0px;
+    text-align: center;
+    margin-top: 0px;
+  }
+  #footerLinks {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px
+  }
 }
